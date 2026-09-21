@@ -2,7 +2,7 @@
    - La caché lleva la versión de la app: al publicar una versión nueva se crea otra caché y la anterior se borra al activarla.
    - La versión nueva NO se activa sola: espera a que la persona pulse «Actualizar» en la app (así nunca se corta una lección).
    - El progreso no vive aquí (vive en IndexedDB/localStorage), por eso actualizar la app no lo toca. */
-const VER = '2026.09.19-2335', CACHE = 'kr-' + VER;
+const VER = '2026.09.20-1220', CACHE = 'kr-' + VER;
 const FILES = ["./", "index.html", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png", "icons/maskable-512.png", "icons/apple-touch-icon.png", "icons/favicon-32.png"];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => Promise.all(FILES.map(u =>
